@@ -1,0 +1,19 @@
+aside{
+    background: #835afd;
+    color: #fff;
+    display: flex;
+    flex: 4;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 120px;
+    .Banner{
+        h1{
+            font-size: 40px;
+        }
+        span{
+            font-size: 18px;
+        }
+    }
+    
+}
