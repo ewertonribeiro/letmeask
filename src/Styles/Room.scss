@@ -1,0 +1,93 @@
+header{
+    width:100vw;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    .logo{
+        display: flex;
+        flex: 5;
+        justify-content: flex-start;
+        padding:25px 60px;
+        img{
+            width:100px;
+        }
+    }
+    .Buttons{
+        flex:4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 32px;
+       .First{
+            display: flex;
+            height: 35px;
+            align-items: center;
+            overflow:hidden;
+            background-color: #fff;
+            border: 1px solid #835afd;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-right: 20px;
+            div{
+                padding: 0 12px;
+
+                background-color: #835afd;
+                display: flex;
+                align-items: center;
+                height: 36px;
+                border-radius: 8px;
+                margin-left: -10px;
+                margin-right: 10px;
+                &:hover{
+                    filter: brightness(0.9)
+                }
+            }
+            span{
+                display: flex;
+                flex: 1;
+                cursor: auto;
+            }
+       }
+       .Second{
+            color:#835afd ;
+            padding: 10px 20px;
+            cursor: pointer;
+            border:1px solid #835afd;
+            border-radius:8px ;
+
+            &:hover{
+                filter:brightness(0.9)
+            }
+        }
+    }
+
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    margin: 50px auto;
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+       
+        .img{
+            padding-top: 130px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2{
+                font-size:30px
+            }
+            p{
+                text-align: center;
+                color:#737380;
+                max-width: 300px;                
+            }
+        }
+    }
+
+}
