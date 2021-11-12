@@ -1,15 +1,28 @@
-
-import  Logo  from '../Assets/images/Logo.png'
-import  GoogleIcon  from '../Assets/icons/Icon.svg'
-
+import {Logo , GoogleIcon} from '../Assets/exports'
+import {useHistory} from 'react-router-dom'
 import '../Styles/Login.scss'
-import { Form } from '../Components/Form'
-import { Aside } from '../Components/aside'
+import {Aside , Form} from '../Components/Exports'
+import {useAuth} from '../Hooks/useAuth'
 
 
 export function Home(props){
+    const history = useHistory()
+    const {SiginWithGoogle , user} = useAuth()
+   
 
 
+   async function logar(e){
+    if(!user){
+        await SiginWithGoogle
+    }
+    
+    history.push('/CreateRoom')
+
+    }
+        
+        
+    
+  
     
     return(
         <div className="Login">
@@ -21,9 +34,10 @@ export function Home(props){
                 <main>
                     <div className='WithGoogle'> 
                         <img src={Logo} alt="Logo Letmeask"/>
-                        <button className='Google'><img src={GoogleIcon} alt='Logo Do Google'/> Crie Sua Sala Com o Google</button>
+                        <button className='Google' onClick={e=>{logar(e)}}><img src={GoogleIcon} alt='Logo Do Google'/> Crie Sua Sala Com o Google</button>
                    </div>
-                        <div className='Separator'>ou entre em uma sala existente!</div>
+                    
+                    <div className='Separator'>ou entre em uma sala existente!</div>
                     <Form placeholder='Ou entre em uma sala existente!'/>
                 
                 </main>

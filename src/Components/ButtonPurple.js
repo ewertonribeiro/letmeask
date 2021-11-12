@@ -1,5 +1,5 @@
-import '../StyleComponents/Form.scss'
-import Entrar from '../../Assets/icons/log-in 1.svg'
+import './Style/Form.scss'
+import Entrar from '../Assets/icons/log-in 1.svg'
 
 export function ButtonPurple(props){
     return(

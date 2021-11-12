@@ -1,9 +1,11 @@
-import { Aside } from "../Components/aside";
-import { Form } from "../Components/Form";
+import {Aside , Form} from '../Components/Exports'
 import Logo from '../Assets/images/Logo.png'
 import '../Styles/Login.scss'
+import {useAuth} from '../Hooks/useAuth'
 
-export function CreateNewRoom(props){
+export function CreateNewRoom(){
+
+    const {user} = useAuth()
 
     return(
         <div className='Login'>
@@ -15,7 +17,16 @@ export function CreateNewRoom(props){
                         <img src={Logo} alt="Logo Letmeask"/>
                         
                    </div>
-                       <h1>Crie Uma Nova Sala</h1>
+                    {(user)
+                        ?
+                     <h1>Ola , {user.name}</h1>   
+                        :
+                        <div></div>
+                    }
+                    
+                    
+                    
+                    <h1>Crie Uma Nova Sala</h1>
                     <Form placeholder='Crie uma nova sala!'/>
                 
                 </main>

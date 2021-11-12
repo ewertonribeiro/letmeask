@@ -1,7 +1,7 @@
-import Logo from '../Assets/images/Logo.png'
-import Copy from '../Assets/icons/copy.png'
-import Asks from '../Assets/images/Ilustração.png'
+import {Logo , Asks , Copy} from '../Assets/exports'
 import '../Styles/Room.scss'
+
+
 export function NewRoom(){
 
     return(

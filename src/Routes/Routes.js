@@ -4,7 +4,7 @@ import { Home } from '../Pages/Home';
 import {NewRoom} from '../Pages/NewRoom'
 
 
-export function Routess(){
+export function Routess(props){
     return(
      <BrowserRouter>
          <Switch>

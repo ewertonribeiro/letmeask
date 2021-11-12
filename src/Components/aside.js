@@ -1,5 +1,5 @@
 import Asking from '../Assets/images/Illustration.png'
-import './StyleComponents/aside.scss'
+import './Style/aside.scss'
 
 
 export function Aside(){
