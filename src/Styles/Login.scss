@@ -82,7 +82,40 @@
 }
 
 
-
+form{
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    .imput{
+        text-align:left;
+        font-size: 17px;
+        padding: 15px;
+        color:rgb(180, 179, 175) ;
+        border: 1px solid rgb(166, 166, 170);
+        border-radius: 8px;
+        margin-bottom: 25px
+    }
+    .EnterRoom{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #835AFD;
+        color: white;
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        &:hover{
+            filter: brightness(0.9)
+        }
+        >img{
+            padding-right: 15px;
+            }
+    }
+}
 
 
 

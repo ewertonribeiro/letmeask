@@ -1,14 +1,15 @@
 import {Logo , GoogleIcon} from '../Assets/exports'
 import {useHistory} from 'react-router-dom'
 import '../Styles/Login.scss'
-import {Aside , Form} from '../Components/Exports'
+import {Aside , ButtonPurple} from '../Components/Exports'
 import {useAuth} from '../Hooks/useAuth'
-
+import { useState } from 'react'
+import {child , get , ref , db} from '../Services/firebase'
 
 export function Home(props){
     const history = useHistory()
     const {SiginWithGoogle , user} = useAuth()
-   
+    const [roomCode , setRoomCode] = useState('')
 
 
    async function logar(e){
@@ -20,7 +21,24 @@ export function Home(props){
 
     }
         
-        
+        async function handleEnterRoom(e){
+            e.preventDefault()
+
+           const dbref = ref(db);
+           get(child(dbref,`rooms/${roomCode}`)).then(response => {
+               if (response.exists()) {
+                   history.push(`/${response.key}`)
+               } else {
+                   alert('Room not found')
+               }
+           }
+               
+           ).catch(Error => {
+               alert(Error.message)
+           })
+
+           
+        }
     
   
     
@@ -38,7 +56,10 @@ export function Home(props){
                    </div>
                     
                     <div className='Separator'>ou entre em uma sala existente!</div>
-                    <Form placeholder='Ou entre em uma sala existente!'/>
+                    <form onSubmit={handleEnterRoom}>
+                    <input onChange={e => setRoomCode(e.target.value) } type="text" className='imput' placeholder='Ou entre em uma sala existente'/>
+                    <ButtonPurple text='Entrar!'/>
+                    </form>
                 
                 </main>
             </section>

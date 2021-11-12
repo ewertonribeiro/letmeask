@@ -10,7 +10,7 @@ export function Routess(props){
          <Switch>
              <Route component={Home} exact path="/"/>
              <Route component={CreateNewRoom} path='/CreateRoom'/>
-             <Route component={NewRoom} path='/NewRoom'/>
+             <Route component={NewRoom} path='/:id'/>
          </Switch>
      </BrowserRouter>
             
