@@ -1,0 +1,28 @@
+.EnterRoom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #835AFD;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    &:hover{
+        filter: brightness(0.9)
+    }
+    >img{
+        padding-right: 15px;
+        }
+}
+.disabled{
+    background-color: #835AFD;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: brightness(0.7);
+}

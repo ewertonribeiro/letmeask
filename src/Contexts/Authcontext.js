@@ -7,26 +7,25 @@ const AuthContext = React.createContext()
     
     const [user , setUser] = useState('')
 
-    useEffect(()=>{
-        const unSubscribe = auth.onAuthStateChanged(user=>{
-     
-         if(user){
-           const {displayName , uid} = user
+    //useEffect(()=>{
+      //  const unSubscribe = auth.onAuthStateChanged(user=>{
+     // if(user){
+         //  const {displayName , uid} = user
          
           
-           setUser({
-             id:uid,
-             name:displayName
-           })
-         }else{
-           throw new Error('Esta faltando informações da sua conta Goolgle')
-         }
-        })
+          // setUser({
+           //  id:uid,
+           //  name:displayName
+          // })
+        // }else{
+        //   throw new Error('Esta faltando informações da sua conta Goolgle')
+        // }
+        //})
      
-        return ()=>{
-          unSubscribe()
-        }
-      },[])
+       // return ()=>{
+       //   unSubscribe()
+       // }
+     // },[])
     async function SiginWithGoogle(){
   
         const response = await signInWithPopup(auth , provider);

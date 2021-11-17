@@ -13,15 +13,15 @@ export function Home(props){
 
 
    async function logar(e){
-    if(!user){
-        await SiginWithGoogle
-    }
+    //if(!user){
+        await SiginWithGoogle()
+    //}
     
     history.push('/CreateRoom')
 
     }
         
-        async function handleEnterRoom(e){
+   async function handleEnterRoom(e){
             e.preventDefault()
 
            const dbref = ref(db);

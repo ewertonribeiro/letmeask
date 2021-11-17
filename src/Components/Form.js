@@ -2,8 +2,7 @@
 import { useState } from 'react'
 import {ButtonPurple} from './Exports'
 import './Style/Form.scss'
-import {ref ,push} from 'firebase/database'
-import {db} from '../Services/firebase'
+import {db ,ref ,push} from '../Services/firebase'
 import {useAuth} from '../Hooks/useAuth'
 import { useHistory } from 'react-router'
 
