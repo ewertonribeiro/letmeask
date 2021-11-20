@@ -33,7 +33,10 @@ export function Question(props){
                 creator:{
                     userId:user.id,
                     UserName:user.name,
-                }
+                },
+                likes:{},
+                isAnwsered:false,
+                isResponding:false,
             });
             setNewQuestion('')
         }

@@ -13,9 +13,9 @@ export function Home(props){
 
 
    async function logar(e){
-    //if(!user){
+    if(!user){
         await SiginWithGoogle()
-    //}
+    }
     
     history.push('/CreateRoom')
 
@@ -26,10 +26,10 @@ export function Home(props){
 
            const dbref = ref(db);
            get(child(dbref,`rooms/${roomCode}`)).then(response => {
-               if (response.exists()) {
+               if (!response.exists() || response.val().isClosed) {
+                   alert('Room not found or Was alredy Closed')
+            } else {
                    history.push(`/${response.key}`)
-               } else {
-                   alert('Room not found')
                }
            }
                

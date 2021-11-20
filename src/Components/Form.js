@@ -27,6 +27,7 @@ export function Form(props){
        const firebaseRoom = push(roomRef,{
            title:newRoom,
            authorId:user.id,
+           isClosed:false,
        })
        
        history.push(`/${firebaseRoom.key}`)

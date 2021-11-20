@@ -3,4 +3,8 @@ import GoogleIcon from './icons/Icon.svg'
 import Copy from './icons/copy.png'
 import Asks from './images/Ilustração.png'
 import UserImg from './icons/user 1.svg'
-export {Logo , GoogleIcon , Copy , Asks , UserImg}
+import Excluir from '../Assets/icons/Excluir.svg'
+import Chat from './icons/Messages, Chat.svg'
+import Checked from './icons/checkmark-circle-1.svg'
+import Like from './icons/thumbs-up 1.svg'
+export {Logo , GoogleIcon , Copy , Asks , UserImg , Excluir , Chat , Checked , Like}

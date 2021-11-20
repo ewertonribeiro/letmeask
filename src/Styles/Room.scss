@@ -17,7 +17,20 @@ header{ overflow-x: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 8px;
         padding: 0 32px;
+        .logout{
+            border: none;
+            border-radius: 8px;
+            padding:11px 20px;
+            color: #835afd;
+            background-color: #fff;
+            cursor: pointer;
+            &:hover{
+                box-shadow: -1px 3px 11px 5px rgba(0,0,0,0.27)
+            }
+
+        }
        .First{
             display: flex;
             height: 35px;
@@ -149,7 +162,6 @@ section{
     margin-left: 30px;
     justify-content:center;
     width: 600px;
-    height: 150px;
     background: #fefefe;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
     padding: 24px;
@@ -162,7 +174,7 @@ section{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 70px;
+        margin-top: 30px;
     
         .user-info {
           display: flex;
@@ -205,3 +217,74 @@ section{
       font-size: 19px;
     }
   }
+  .isResponding{
+      background-color:#F4F0FF;
+      border: 1px solid #835afd,
+  }
+ 
+  .isAnwsered{
+  
+    background: #ccc;
+    border: none;
+    >p{
+        color: #262627;
+    }
+   
+    .Btns{
+        .isResponding{
+            display: none;
+        }
+        .isAnwsered{
+            display: none;
+        }
+        .like{
+            display: none;
+        }
+    }
+        .user-info {
+         
+    
+          img {
+           
+            background-color:rgb(170, 124, 124);
+           
+          }
+    
+          span {
+            color: #737380;
+         
+          }
+        }
+    }
+
+.Btns{
+    display: flex;
+    gap: 5px;
+    .isAnwsered{
+        border: none;
+        background-color:transparent;
+        cursor: pointer;
+
+       
+    }
+    .isResponding{
+        border: none;
+        background-color:transparent;
+        cursor: pointer;
+    }
+    .Excluir{
+        border: none;
+        background-color:transparent;
+        cursor: pointer;
+        
+    }
+    .like{
+        border: none;
+        background-color:transparent;
+        cursor: pointer;
+        display: flex;
+        align-items:flex-end;
+        gap: 4px;
+    }
+}
+ 
