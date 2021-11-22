@@ -26,7 +26,7 @@ export function CreateNewRoom(){
                     
                     
                     
-                    <h1>Crie Uma Nova Sala</h1>
+                    <h1 className='TitleNewRoom'>Crie Uma Nova Sala</h1>
                     <Form placeholder='Crie uma nova sala!'/>
                 
                 </main>

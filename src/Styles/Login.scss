@@ -2,9 +2,28 @@
     display: flex;
     height: 100vh;
     align-items: stretch;
-    
+    aside{
+        background: #835afd;
+        color: #fff;
+        display: flex;
+        flex: 4;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 120px;
+        .Banner{
+            h1{
+                font-size: 40px;
+            }
+            span{
+                font-size: 18px;
+            }
+        }
+        
+    }
 
-    section{flex: 7;
+    section{
+        flex: 7;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -120,7 +139,28 @@ form{
 
 
 
-
+@media screen and (max-width:900px) {
+    .Login{
+        display: block;
+        aside{
+           padding: 20px 40px 0px 40px;
+            .Banner{
+                h1{
+                    font-size: 30px;
+                }
+            }
+            
+        }
+        section{
+            main{
+                h1{
+                    font-size:30px;
+                }
+            }
+        }
+     }
+     
+}
 
 
 

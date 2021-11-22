@@ -8,6 +8,7 @@ import {Question} from '../Components/Exports'
 import {UserImg} from '../Assets/exports'
 import {update} from 'firebase/database'
 import {remove} from 'firebase/database'
+import Menu from '../Assets/icons/menu-button_icon-icons.com_72989.svg'
 
 
 export function NewRoom(){
@@ -149,9 +150,7 @@ export function NewRoom(){
                 <img src={Logo} alt='logo'/>
             </div>
             <div className='Buttons'>
-               
-              
-               <button className='First'>
+              <button className='First'>
                 <div>
                    <img src={Copy} alt='copy'/>
                    </div>
@@ -163,15 +162,34 @@ export function NewRoom(){
                 :
                 <button className='Second' type='button' onClick={handleCloseRoom}>Encerrar Sala!</button>
                 }
-                <button onClick={(e)=>logOut(e)} className='logout'>LogOut</button>
-                </div>
-        
+               {user && <button onClick={(e)=>logOut(e)} className='logout'>LogOut</button>} 
+            </div>
+            <div className='menu-icon'><img src={Menu} alt='menu'/></div>
         </header>
+                
+            <div className='menu-mobile'>
+          
+           <button className='First'>
+                <div>
+                   <img src={Copy} alt='copy'/>
+                   </div>
+                <span>Sala {roomcode}</span>
+            </button>
+                {(!user || user.id !== authorId )
+                ?
+                <div></div>
+                :
+                <button className='Second' type='button' onClick={handleCloseRoom}>Encerrar Sala!</button>
+                }
+               {user && <button onClick={(e)=>logOut(e)} className='logout'>LogOut</button>} 
+            
+            </div>
         
         <section>
             <main>
             <div className="Title"><h1>{roomTitle}</h1><span>{question.length}Pergunta(s)</span></div>
             {(user.id !== authorId) && <Question/> }
+                    <div className='question-wrapper'>
                   {question.length>0
                   ?
                   question.map(item=>(
@@ -214,6 +232,7 @@ export function NewRoom(){
                    
                     </div>
                   }
+                    </div>
                 
                  
                

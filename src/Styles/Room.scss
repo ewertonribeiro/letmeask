@@ -1,8 +1,11 @@
-header{ overflow-x: hidden;
+header{ 
+    overflow-x: hidden;
     width:100vw;
     display: flex;
     align-items: center;
     border-bottom: 1px solid #ccc;
+    position: fixed;
+    top: 0;
     .logo{
         display: flex;
         flex: 5;
@@ -73,7 +76,83 @@ header{ overflow-x: hidden;
             }
         }
     }
+    .menu-icon{
+        width:30px;
+        height:30px;
+        margin-right: 30px;
+        cursor: pointer;
+        display: none;
+        >img{
+           width:100%;
+           height:100%;
+           color: #835afd 
+        }
+    }
+}
+.menu-mobile{
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width:100%;
+    height:40vh;
+    background-color:rgba(131, 90, 253,0.8);
+    transition: 200;
+    display: none;
+    
+    .logout{
+        border: none;
+        border-radius: 8px;
+        padding:11px 20px;
+        color: #835afd;
+        background-color: #fff;
+        cursor: pointer;
+        &:hover{
+            box-shadow: -1px 3px 11px 5px rgba(0,0,0,0.27)
+        }
 
+    }
+   .First{
+        display: flex;
+        padding-right: 19px;
+        align-items: center;
+        overflow:hidden;
+        background-color: #fff;
+        border: 1px solid #835afd;
+        border-radius: 8px;
+        cursor: pointer;
+        div{
+            padding: 0 12px;
+            background-color: #835afd;
+            display: flex;
+            align-items: center;
+            height: 36px;
+            border-radius: 8px;
+            margin-left: -10px;
+            margin-right: 10px;
+            &:hover{
+                filter: brightness(0.9)
+            }
+        }
+        span{
+            display: flex;
+            flex: 1;
+            cursor: auto;
+           
+        }
+   }
+   .Second{
+        color:#835afd ;
+        padding: 10px 20px;
+        cursor: pointer;
+        border:1px solid #835afd;
+        border-radius:8px ;
+
+        &:hover{
+            filter:brightness(0.9)
+        }
+    }
 }
 
 section{
@@ -82,9 +161,11 @@ section{
     flex-direction: column;
     align-items:center;
     justify-content: flex-start;
+    
     main{
         display: flex;
         flex-direction: column;
+       margin-top: 110px;
         .form{
             justify-content:center;
             display: flex;
@@ -144,6 +225,7 @@ section{
     display : flex;
     align-items:baseline;
     gap: 10px;
+  
     >span{
         display: flex;
         text-align:center;
@@ -159,13 +241,13 @@ section{
 }
 
 .question{
-    margin-left: 30px;
+   
+    margin: 20px 20px 20px 30px;
     justify-content:center;
     width: 600px;
     background: #fefefe;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
     padding: 24px;
-    margin-top: 20px;
     border-radius: 15px;
     >p{
         color: #29292e;
@@ -197,7 +279,10 @@ section{
         }
     }
 }
-
+.question-wrapper{
+    height: 500px;
+    overflow-y: scroll;
+}
 .user {
     display: flex;
     align-items: center;
@@ -286,5 +371,20 @@ section{
         align-items:flex-end;
         gap: 4px;
     }
+}
+.disabled{
+    display: none;
+}
+
+@media screen and (max-width:725px){
+    header{
+        .Buttons{
+            display: none;
+        }
+        .menu-icon{
+            display: flex;
+        }
+    }
+    
 }
  
